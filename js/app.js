@@ -16,6 +16,9 @@ form.addEventListener('submit', (e) => {
 	const cryptocurrency = document.getElementById('cryptocurrency').value;
 
 	// Validate user input
-	if (currency === '' or cryptocurrency === '') {}
+	if (currency === '' || cryptocurrency === '') {
+		// Display error
+		ui.displayErrorMessage('All fields are mandatory.', 'deep-orange darken-4 card-panel');
+	}
 
 });

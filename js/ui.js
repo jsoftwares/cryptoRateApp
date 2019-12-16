@@ -30,4 +30,21 @@ class UI
 
 		})
 	}
+
+	// Build error DIV and display to caller
+	displayErrorMessage(message, classes){
+		const div = document.createElement('div');
+		// Add classes
+		div.className = classes;
+		// Add error message
+		div.appendChild(document.createTextNode(message));
+
+		const messageDiv = document.querySelector('.messages');
+		messageDiv.appendChild(div);
+
+		// Remove error message after 3 seconds
+		setTimeout(() => {
+			document.querySelector('.messages div').remove(); //remove any div inside an element with class messages
+		}, 3000);
+	}
 }
